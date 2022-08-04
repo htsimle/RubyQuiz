@@ -4,7 +4,7 @@ quiz = CSV.read("problems.csv")
 wrongAns = 0
 rightAns = 0
 
-status = Timeout::timeout(5) {
+status = Timeout::timeout(30) {
    for i in 0..11  
       puts "Q#{i+1}" + ": -> What is " + quiz[i][0] +" ?"
       ans = gets.chomp.to_i 
@@ -17,7 +17,6 @@ status = Timeout::timeout(5) {
    end
 }
 puts "You Provide #{rightAns} right and #{wrongAns} wrong answers."
-
 puts "Press 1 if you want to change the file name else 0"
 flag = gets.chomp.to_i
 if flag == 1

@@ -1,6 +1,6 @@
 require 'csv'
 require 'timeout'
-quiz = File.read("file.rb")
+quiz = CSV.read("problems.csv")
 wrongAns = 0
 rightAns = 0
 for i in 0..11  
